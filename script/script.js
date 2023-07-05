@@ -5,6 +5,7 @@ createApp({
         return {
                 apiUrl : './server.php',
                 discs : [],
+                selectedDisc: null,
         }
     },
 
@@ -14,16 +15,28 @@ createApp({
                 params: {}
             })
             .then((response)=> {
-                console.log(response);
                 this.discs = response.data;
+                console.log(response);
             })
             .catch(function (error) {
                 console.log(error);
             })
+        },
+        openDisc(disc){
+            console.log('start');
+            if (disc >= this.discs.length || disc < 0){
+                return ;
+            }
+            this.selectedDisc = disc;
+            console.log(this.selectedDisc);
+        },
+        closeInfo(){
+            this.selectedDisc = null;
         }
     },
 
     created() {
         this.getDiscs();
     },
+
 }).mount('#app');

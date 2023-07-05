@@ -9,3 +9,41 @@ main{
 .my_card-bg{
     background-color: #112030;
 }
+
+.my_album-details{
+    width: 98vw;
+    height: 98vh;
+    background-color:rgba(17, 32, 48, 0.9);
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+.my_close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+}
+
+i{
+    color: #FFF;
+    font-size: 2rem;
+}
+
+.my_album-details img{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 40%;
+    left: 50%;
+}
+
+.my_album-info{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:65%;
+    left:50%;
+    color: #FFF;
+}
