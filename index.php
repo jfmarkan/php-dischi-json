@@ -13,29 +13,29 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <div id="app">
+        <header>
             <div class="container">
-                <div class="row p-5">
-                    <div class="col-12">
-                        <h1 class="mb-3">
-                            Discs
-                        </h1>
-                    </div>
-                    <div class="col-12">
-                        <ul class="list-group">
-                            <li v-for="(disc, index) in discs" :key="index">
-                                {{ disc.title }}
-                                {{ disc.author }}
-                                {{ disc.year }}
-                                {{ disc.poster }}
-                                {{ disc.genre }}
-                            </li>
-                        </ul>
+                <img src="./img/logo.png" alt="" class="py-2">
+            </div>
+        </header>
+        <main>  
+            <div id="app">
+                <div class="container">
+                    <div class="row p-5">
+                        <div v-for="(disc, index) in discs" :key="index" class="col-3 mx-5 mb-5">
+                            <div class="card p-2 my_card-bg text-white">
+                                <img :src="disc.poster" class="card-img-top" alt="Album Cover">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">{{ disc.title }}</h5>
+                                    <p class="card-text fw-light">{{ disc.author }}</p>
+                                    <h5>{{ disc.year }}</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+        </main>
         <script src="./script/script.js"></script>
     </body>
 </html>
