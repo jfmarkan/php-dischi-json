@@ -26,6 +26,11 @@ main{
     padding: 1rem;
 }
 
+.my_close-btn:hover{
+    color: #cacaca;
+    background-color: rgba(17, 32, 48, 1);
+}
+
 i{
     color: #FFF;
     font-size: 2rem;
